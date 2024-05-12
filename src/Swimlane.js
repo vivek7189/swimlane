@@ -30,7 +30,7 @@ const SearchInput = styled.input`
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px;
-  width:400px;
+  width: 400px;
 `;
 
 const SearchButton = styled.button`
@@ -39,7 +39,8 @@ const SearchButton = styled.button`
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #ffffff;
+  background-color: #190202;
+  color: white;
   cursor: pointer;
   :hover {
     background-color: #f0f0f0;
@@ -58,10 +59,11 @@ const AddListButton = styled.button`
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
-  background-color: white;
+  background-color: #b94137; /* Red color */
+  color: white;
   cursor: pointer;
   :hover {
-    background-color: #ccc;
+    background-color: #ff6655; /* Lighter red on hover */
   }
 `;
 
@@ -77,12 +79,14 @@ const ResetButton = styled.button`
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
-  background-color: white;
+  background-color: #05481f; /* Green color */
+  color: white;
   cursor: pointer;
   :hover {
-    background-color: #ccc;
+    background-color: #1a9347; /* Darker green on hover */
   }
 `;
+
 const BrandName = styled.h1`
   align-self: center;
   color: white;
@@ -90,18 +94,21 @@ const BrandName = styled.h1`
     align-self: center;
   }
 `;
+
 const UpdateConfigButton = styled.button`
   padding: 8px 16px;
   border: none;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
-  background-color: white;
+  background-color: #2061d1; /* Blue color */
+  color: white;
   cursor: pointer;
   :hover {
-    background-color: #ccc;
+    background-color: #2c6ad9; /* Darker blue on hover */
   }
 `;
+
 const Notification = styled.div`
   position: fixed;
   top: 100px;
@@ -356,8 +363,9 @@ const Trello = () => {
               placeholder="Enter stage..."
             />
           ) : null}
+           <UpdateConfigButton onClick={() => setShowModal(true)}>Update Config</UpdateConfigButton>
         </AddListContainer>
-        <UpdateConfigButton onClick={() => setShowModal(true)}>Update Config</UpdateConfigButton>
+       
       </Header>
       <DragDropContext onDragEnd={onDragEnd}>
         {board.listOrder.length === 0 ? (
