@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* BlockPreview.css */
+.block-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 20px;
+}
+
+.block-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.block-description {
+  margin-bottom: 15px;
+}
+
+.block-history-heading {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.block-history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.block-history-item {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.block-history-item:hover {
+  text-decoration: underline;
+}
+.icon{
+  cursor: pointer;
+}
+.delete{
+  color: red;
+  background: #d9d9d9;
+
+}
+.save{
+  color: red;
+  background: #fff;
+
+}
