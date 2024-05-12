@@ -62,19 +62,14 @@ const Card = ({ card, index, listId, deleteCard, updateCard }) => {
 
   const handleSave = (e,listId,cardId) => {
     e.stopPropagation();
-    // Save the edited content
-    // You can implement saving functionality here, such as updating state or making API calls
-    // For simplicity, this example updates the card directly in state
     const updatedCard = {
       ...card,
       title: editedTitle,
       description: editedDescription,
     };
-
-    // Update the card in state
     updateCard(listId,updatedCard);
 
-    setIsEditing(false); // Exit editing mode
+    setIsEditing(false);
   };
 const deleteCardID=(e,listId, cardId)=>{
   e.stopPropagation();

@@ -131,16 +131,16 @@ const Trello = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [notification, setNotification] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [updatedConfig, setUpdatedConfig] = useState(JSON.stringify(initialData, null, 2)); // Stringify initialData for modal input
+  const [updatedConfig, setUpdatedConfig] = useState(JSON.stringify(initialData, null, 2));
   const resetBoard = () => {
     setBoard(initialData);
   };
   const updateBoardConfig = () => {
-    // Parse updatedConfig JSON and update the board state
+
     try {
       const updatedData = JSON.parse(updatedConfig);
       setBoard(updatedData);
-      setShowModal(false); // Close modal after updating
+      setShowModal(false); 
     } catch (error) {
       console.error("Invalid JSON format:", error);
     }
@@ -256,9 +256,9 @@ const Trello = () => {
     });
   };
   const updateCard = (listId,updatedCard) => {
-    // Find the index of the updated card in the list's cardIds array
+
     const cardIndex = board.lists[listId].cardIds.indexOf(updatedCard.id);
-    // Update the card in the board's state
+
     const newBoard = {
       ...board,
       cards: {

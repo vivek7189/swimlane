@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-/* BlockPreview.css */
+
 .block-card {
   background-color: #fff;
   border-radius: 8px;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-/* Hover effect */
+
 .block-history-item:hover {
   text-decoration: underline;
 }
